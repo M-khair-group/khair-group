@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Khair Group</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            padding: 15px;
+            overflow: hidden;
+        }
+        
+        .card {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            max-height: 95vh;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-header {
+            background-color: #0c4da2;
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            overflow: auto;
+            padding: 30px;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .description {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+        
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .contact-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            min-width: 200px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .phone-icon {
+            color: #0c4da2;
+        }
+        
+        .whatsapp-icon {
+            color: #25D366;
+        }
+        
+        .email-icon {
+            color: #D44638;
+        }
+        
+        .contact-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .contact-link {
+            text-decoration: none;
+            font-size: 16px;
+            word-break: break-all;
+            display: block;
+            padding: 8px 0;
+            border-radius: 5px;
+            transition: all 0.2s ease;
+        }
+        
+        .phone-link {
+            color: #0c4da2;
+            background-color: #e8f0ff;
+        }
+        
+        .whatsapp-link {
+            color: white;
+            background-color: #25D366;
+        }
+        
+        .email-link {
+            color: white;
+            background-color: #D44638;
+        }
+        
+        .contact-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .contact-label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #777;
+        }
+        
+        .quick-email {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 25px;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .quick-email-title {
+            font-size: 20px;
+            color: #0c4da2;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .email-subjects {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .email-subject {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: all 0.2s ease;
+            text-align: left;
+        }
+        
+        .email-subject:hover {
+            background-color: #f7b731;
+            border-color: #f7b731;
+            transform: translateY(-2px);
+        }
+        
+        .card-footer {
+            background-color: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            flex-shrink: 0;
+        }
+        
+        @media (max-width: 600px) {
+            .card-body {
+                padding: 20px 15px;
+            }
+            
+            .logo {
+                font-size: 26px;
+            }
+            
+            .tagline {
+                font-size: 15px;
+            }
+            
+            .description {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            
+            .contact-cards {
+                gap: 15px;
+            }
+            
+            .contact-card {
+                min-width: calc(50% - 15px);
+                padding: 15px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <div class="logo">Mohammad Khair Group</div>
+            <div class="tagline">Excellence in Service</div>
+        </div>
+        
+        <div class="card-body">
+            <div class="description">
+                Welcome to Mohammad Khair Group, your trusted partner for professional services and innovative solutions. We are committed to excellence and dedicated to helping our clients achieve their goals.
+            </div>
+            
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon phone-icon">📞</div>
+                    <div class="contact-title">Call Us</div>
+                    <span class="contact-label">Tap to call</span>
+                    <a href="tel:0597766887" class="contact-link phone-link">059-776-6887</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon whatsapp-icon">💬</div>
+                    <div class="contact-title">WhatsApp</div>
+                    <span class="contact-label">Tap to message</span>
+                    <a href="https://wa.me/972597766887" class="contact-link whatsapp-link">WhatsApp Chat</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon email-icon">✉️</div>
+                    <div class="contact-title">Email Us</div>
+                    <span class="contact-label">Tap to email</span>
+                    <a href="mailto:khair.group11@gmail.com" class="contact-link email-link">Send Email</a>
+                </div>
+            </div>
+            
+            <div class="quick-email">
+                <div class="quick-email-title">Contact Us Directly</div>
+                <div class="email-subjects">
+                    <a href="mailto:khair.group11@gmail.com?subject=Request%20for%20Information&body=Hello%20Mohammad%20Khair%20Group%2C%0A%0AI%20would%20like%20to%20request%20more%20information%20about%20your%20services.%0A%0AThank%20you." class="email-subject">
+                        Request for Information
+                    </a>
+                    <a href="mailto:khair.group11@gmail.com?subject=Business%20Inquiry&body=Hello%20Mohammad%20Khair%20Group%2C%0A%0AI%20am%20interested%20in%20discussing%20a%20potential%20business%20opportunity.%0A%0AThank%20you." class="email-subject">
+                        Business Inquiry
+                    </a>
+                    <a href="https://wa.me/972597766887?text=Hello%20Mohammad%20Khair%20Group%2C%0A%0AI%20would%20like%20to%20discuss%20a%20potential%20partnership%20opportunity." class="email-subject">
+                        WhatsApp: Partnership Inquiry
+                    </a>
+                    <a href="https://wa.me/972597766887?text=Hello%20Mohammad%20Khair%20Group%2C%0A%0AI%20have%20a%20question%20about%20your%20services." class="email-subject">
+                        WhatsApp: Quick Question
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-footer">
+            &copy; 2025 Mohammad Khair Group
+        </div>
+    </div>
+</body>
+</html>
